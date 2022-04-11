@@ -5,7 +5,7 @@ public class StringTest {
         go();
     }
 
-    void go() {
+    private void go() {
         String s = new String("1qaz2wsx3edc");
 
         System.out.println("s.length() = " + s.length());

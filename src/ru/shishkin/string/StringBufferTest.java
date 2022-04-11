@@ -5,7 +5,7 @@ public class StringBufferTest {
         go();
     }
 
-    void go() {
+    private void go() {
         StringBuffer s = new StringBuffer("1234567890");
 
         System.out.println("s.length() = " + s.length());

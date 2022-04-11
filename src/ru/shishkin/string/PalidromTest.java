@@ -5,14 +5,14 @@ public class PalidromTest {
         System.out.println(checkPalidrom(2574452));
     }
 
-    String checkPalidrom(int chislo) {
-        StringBuffer str = new StringBuffer("").append(chislo);
+    private String checkPalidrom(int chislo) {
+        StringBuffer stringBuffer = new StringBuffer("").append(chislo);
 
-        str.reverse();
+        stringBuffer.reverse();
 
-        String str1 = str.substring(0, str.length());
+        String stringBuffer1 = stringBuffer.substring(0, stringBuffer.length());
 
-        if (chislo == Integer.parseInt(str1)) {
+        if (chislo == Integer.parseInt(stringBuffer1)) {
             return "This is palidrom";
         } else {
             return "No";
