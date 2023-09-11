@@ -9,11 +9,13 @@ public class TestGreetingService extends GreetingServiceGrpc.GreetingServiceImpl
     public void greeting(GreetingServiceOuterClass.HelloRequest request,
                          StreamObserver<GreetingServiceOuterClass.HelloResponse> responseObserver) {
 
-        System.out.println(request);
+        System.out.println("request - " + request);
 
         GreetingServiceOuterClass.HelloResponse response = GreetingServiceOuterClass
                 .HelloResponse.newBuilder().setGreeting("Hello from server, " + request.getName())
                 .build();
+
+        System.out.println("response - " + response);
 
         responseObserver.onNext(response);
 
