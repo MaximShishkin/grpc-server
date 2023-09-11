@@ -6,6 +6,7 @@ com\example\grpc\GreetingServiceGrpc$GreetingServiceFileDescriptorSupplier.class
 com\example\grpc\GreetingServiceGrpc$GreetingServiceImplBase.class
 com\example\grpc\GreetingServiceOuterClass$HelloRequest$1.class
 com\example\grpc\GreetingServiceOuterClass$HelloRequestOrBuilder.class
+org\example\GreetingServiceImpl.class
 com\example\grpc\GreetingServiceOuterClass$HelloResponse$Builder.class
 com\example\grpc\GreetingServiceOuterClass$HelloResponse.class
 com\example\grpc\GreetingServiceGrpc.class

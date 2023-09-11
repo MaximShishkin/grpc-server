@@ -1,4 +1,4 @@
-package org.example;
+package ru.shishkin;
 
 import static org.junit.Assert.assertTrue;
 

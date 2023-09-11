@@ -1,4 +1,4 @@
-package org.example;
+package ru.shishkin.grpc.server;
 
 import com.example.grpc.GreetingServiceGrpc;
 import com.example.grpc.GreetingServiceOuterClass;
@@ -8,6 +8,7 @@ public class GreetingServiceImpl extends GreetingServiceGrpc.GreetingServiceImpl
     @Override
     public void greeting(GreetingServiceOuterClass.HelloRequest request,
                          StreamObserver<GreetingServiceOuterClass.HelloResponse> responseObserver) {
+
         System.out.println(request);
 
         GreetingServiceOuterClass.HelloResponse response = GreetingServiceOuterClass

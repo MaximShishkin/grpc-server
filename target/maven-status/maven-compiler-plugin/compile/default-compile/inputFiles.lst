@@ -1,3 +1,4 @@
-D:\projectdirectory\IntelliJ_IDEA_Project\GRPCServer\target\generated-sources\protobuf\java\com\example\grpc\GreetingServiceOuterClass.java
-D:\projectdirectory\IntelliJ_IDEA_Project\GRPCServer\target\generated-sources\protobuf\grpc-java\com\example\grpc\GreetingServiceGrpc.java
-D:\projectdirectory\IntelliJ_IDEA_Project\GRPCServer\src\main\java\org\example\App.java
+D:\Files\MakShish\Desktop\ttt\grpc-server\src\main\java\org\example\GreetingServiceImpl.java
+D:\Files\MakShish\Desktop\ttt\grpc-server\target\generated-sources\protobuf\grpc-java\com\example\grpc\GreetingServiceGrpc.java
+D:\Files\MakShish\Desktop\ttt\grpc-server\target\generated-sources\protobuf\java\com\example\grpc\GreetingServiceOuterClass.java
+D:\Files\MakShish\Desktop\ttt\grpc-server\src\main\java\org\example\App.java
