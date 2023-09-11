@@ -30,6 +30,9 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\projectdirectory\IntelliJ_IDEA_Project\GRPCServer\src\main\java\org\example\generateclass" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ru.shishkin.grpc.generetedsources" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">

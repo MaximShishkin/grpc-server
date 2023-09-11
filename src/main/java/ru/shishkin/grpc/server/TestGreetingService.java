@@ -1,10 +1,10 @@
 package ru.shishkin.grpc.server;
 
-import com.example.grpc.GreetingServiceGrpc;
-import com.example.grpc.GreetingServiceOuterClass;
 import io.grpc.stub.StreamObserver;
+import ru.shishkin.grpc.generetedsources.GreetingServiceGrpc;
+import ru.shishkin.grpc.generetedsources.GreetingServiceOuterClass;
 
-public class GreetingServiceImpl extends GreetingServiceGrpc.GreetingServiceImplBase {
+public class TestGreetingService extends GreetingServiceGrpc.GreetingServiceImplBase {
     @Override
     public void greeting(GreetingServiceOuterClass.HelloRequest request,
                          StreamObserver<GreetingServiceOuterClass.HelloResponse> responseObserver) {

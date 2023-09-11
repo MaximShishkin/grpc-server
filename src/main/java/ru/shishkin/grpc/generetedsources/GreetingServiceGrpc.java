@@ -1,18 +1,10 @@
-package com.example.grpc;
+package ru.shishkin.grpc.generetedsources;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ClientCalls.asyncServerStreamingCall;
 import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingServerStreamingCall;
 import static io.grpc.stub.ClientCalls.blockingUnaryCall;
 import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncBidiStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncClientStreamingCall;
-import static io.grpc.stub.ServerCalls.asyncServerStreamingCall;
 import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
@@ -24,32 +16,32 @@ public final class GreetingServiceGrpc {
 
   private GreetingServiceGrpc() {}
 
-  public static final String SERVICE_NAME = "com.example.grpc.GreetingService";
+  public static final String SERVICE_NAME = "ru.shishkin.grpc.GreetingService";
 
   // Static method descriptors that strictly reflect the proto.
-  private static volatile io.grpc.MethodDescriptor<com.example.grpc.GreetingServiceOuterClass.HelloRequest,
-      com.example.grpc.GreetingServiceOuterClass.HelloResponse> getGreetingMethod;
+  private static volatile io.grpc.MethodDescriptor<GreetingServiceOuterClass.HelloRequest,
+      GreetingServiceOuterClass.HelloResponse> getGreetingMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "greeting",
-      requestType = com.example.grpc.GreetingServiceOuterClass.HelloRequest.class,
-      responseType = com.example.grpc.GreetingServiceOuterClass.HelloResponse.class,
+      requestType = GreetingServiceOuterClass.HelloRequest.class,
+      responseType = GreetingServiceOuterClass.HelloResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.example.grpc.GreetingServiceOuterClass.HelloRequest,
-      com.example.grpc.GreetingServiceOuterClass.HelloResponse> getGreetingMethod() {
-    io.grpc.MethodDescriptor<com.example.grpc.GreetingServiceOuterClass.HelloRequest, com.example.grpc.GreetingServiceOuterClass.HelloResponse> getGreetingMethod;
+  public static io.grpc.MethodDescriptor<GreetingServiceOuterClass.HelloRequest,
+      GreetingServiceOuterClass.HelloResponse> getGreetingMethod() {
+    io.grpc.MethodDescriptor<GreetingServiceOuterClass.HelloRequest, GreetingServiceOuterClass.HelloResponse> getGreetingMethod;
     if ((getGreetingMethod = GreetingServiceGrpc.getGreetingMethod) == null) {
       synchronized (GreetingServiceGrpc.class) {
         if ((getGreetingMethod = GreetingServiceGrpc.getGreetingMethod) == null) {
           GreetingServiceGrpc.getGreetingMethod = getGreetingMethod =
-              io.grpc.MethodDescriptor.<com.example.grpc.GreetingServiceOuterClass.HelloRequest, com.example.grpc.GreetingServiceOuterClass.HelloResponse>newBuilder()
+              io.grpc.MethodDescriptor.<GreetingServiceOuterClass.HelloRequest, GreetingServiceOuterClass.HelloResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "greeting"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.example.grpc.GreetingServiceOuterClass.HelloRequest.getDefaultInstance()))
+                  GreetingServiceOuterClass.HelloRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.example.grpc.GreetingServiceOuterClass.HelloResponse.getDefaultInstance()))
+                  GreetingServiceOuterClass.HelloResponse.getDefaultInstance()))
               .setSchemaDescriptor(new GreetingServiceMethodDescriptorSupplier("greeting"))
               .build();
         }
@@ -87,19 +79,19 @@ public final class GreetingServiceGrpc {
 
     /**
      */
-    public void greeting(com.example.grpc.GreetingServiceOuterClass.HelloRequest request,
-        io.grpc.stub.StreamObserver<com.example.grpc.GreetingServiceOuterClass.HelloResponse> responseObserver) {
+    public void greeting(GreetingServiceOuterClass.HelloRequest request,
+                         io.grpc.stub.StreamObserver<GreetingServiceOuterClass.HelloResponse> responseObserver) {
       asyncUnimplementedUnaryCall(getGreetingMethod(), responseObserver);
     }
 
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+    @Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
             getGreetingMethod(),
             asyncUnaryCall(
               new MethodHandlers<
-                com.example.grpc.GreetingServiceOuterClass.HelloRequest,
-                com.example.grpc.GreetingServiceOuterClass.HelloResponse>(
+                GreetingServiceOuterClass.HelloRequest,
+                GreetingServiceOuterClass.HelloResponse>(
                   this, METHODID_GREETING)))
           .build();
     }
@@ -117,7 +109,7 @@ public final class GreetingServiceGrpc {
       super(channel, callOptions);
     }
 
-    @java.lang.Override
+    @Override
     protected GreetingServiceStub build(io.grpc.Channel channel,
         io.grpc.CallOptions callOptions) {
       return new GreetingServiceStub(channel, callOptions);
@@ -125,8 +117,8 @@ public final class GreetingServiceGrpc {
 
     /**
      */
-    public void greeting(com.example.grpc.GreetingServiceOuterClass.HelloRequest request,
-        io.grpc.stub.StreamObserver<com.example.grpc.GreetingServiceOuterClass.HelloResponse> responseObserver) {
+    public void greeting(GreetingServiceOuterClass.HelloRequest request,
+                         io.grpc.stub.StreamObserver<GreetingServiceOuterClass.HelloResponse> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getGreetingMethod(), getCallOptions()), request, responseObserver);
     }
@@ -144,7 +136,7 @@ public final class GreetingServiceGrpc {
       super(channel, callOptions);
     }
 
-    @java.lang.Override
+    @Override
     protected GreetingServiceBlockingStub build(io.grpc.Channel channel,
         io.grpc.CallOptions callOptions) {
       return new GreetingServiceBlockingStub(channel, callOptions);
@@ -152,7 +144,7 @@ public final class GreetingServiceGrpc {
 
     /**
      */
-    public com.example.grpc.GreetingServiceOuterClass.HelloResponse greeting(com.example.grpc.GreetingServiceOuterClass.HelloRequest request) {
+    public GreetingServiceOuterClass.HelloResponse greeting(GreetingServiceOuterClass.HelloRequest request) {
       return blockingUnaryCall(
           getChannel(), getGreetingMethod(), getCallOptions(), request);
     }
@@ -170,7 +162,7 @@ public final class GreetingServiceGrpc {
       super(channel, callOptions);
     }
 
-    @java.lang.Override
+    @Override
     protected GreetingServiceFutureStub build(io.grpc.Channel channel,
         io.grpc.CallOptions callOptions) {
       return new GreetingServiceFutureStub(channel, callOptions);
@@ -178,8 +170,8 @@ public final class GreetingServiceGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.example.grpc.GreetingServiceOuterClass.HelloResponse> greeting(
-        com.example.grpc.GreetingServiceOuterClass.HelloRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<GreetingServiceOuterClass.HelloResponse> greeting(
+        GreetingServiceOuterClass.HelloRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getGreetingMethod(), getCallOptions()), request);
     }
@@ -200,21 +192,21 @@ public final class GreetingServiceGrpc {
       this.methodId = methodId;
     }
 
-    @java.lang.Override
-    @java.lang.SuppressWarnings("unchecked")
+    @Override
+    @SuppressWarnings("unchecked")
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
         case METHODID_GREETING:
-          serviceImpl.greeting((com.example.grpc.GreetingServiceOuterClass.HelloRequest) request,
-              (io.grpc.stub.StreamObserver<com.example.grpc.GreetingServiceOuterClass.HelloResponse>) responseObserver);
+          serviceImpl.greeting((GreetingServiceOuterClass.HelloRequest) request,
+              (io.grpc.stub.StreamObserver<GreetingServiceOuterClass.HelloResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
       }
     }
 
-    @java.lang.Override
-    @java.lang.SuppressWarnings("unchecked")
+    @Override
+    @SuppressWarnings("unchecked")
     public io.grpc.stub.StreamObserver<Req> invoke(
         io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
@@ -228,12 +220,12 @@ public final class GreetingServiceGrpc {
       implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
     GreetingServiceBaseDescriptorSupplier() {}
 
-    @java.lang.Override
+    @Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return com.example.grpc.GreetingServiceOuterClass.getDescriptor();
+      return GreetingServiceOuterClass.getDescriptor();
     }
 
-    @java.lang.Override
+    @Override
     public com.google.protobuf.Descriptors.ServiceDescriptor getServiceDescriptor() {
       return getFileDescriptor().findServiceByName("GreetingService");
     }
@@ -253,7 +245,7 @@ public final class GreetingServiceGrpc {
       this.methodName = methodName;
     }
 
-    @java.lang.Override
+    @Override
     public com.google.protobuf.Descriptors.MethodDescriptor getMethodDescriptor() {
       return getServiceDescriptor().findMethodByName(methodName);
     }
